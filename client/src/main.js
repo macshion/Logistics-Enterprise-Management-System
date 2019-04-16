@@ -6,6 +6,8 @@ import router from './router'
 import service from './service/service'
 import iView from 'iview'
 import store from './store'
+import 'iview/dist/styles/iview.css'
+import './assets/css/_main.less'
 Vue.config.productionTip = false
 Vue.use(iView)
 Vue.prototype.service = service

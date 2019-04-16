@@ -1,0 +1,47 @@
+@white:#fff;
+
+@px:0px;
+// 生成原子边距
+//@n：循环次数、@a：每次递增、@name：Class名称前缀、@pro：属性名、@i：Class名称后缀&开始数字
+.space(@n, @a, @name, @pro, @i) when (@i =< @n){
+    .@{name}@{i} {
+        @{pro}: @px + @i;
+    }
+    .space(@n, @a, @name, @pro, (@i + @a));
+}
+//调用函数
+.space(20,1,p,padding,1);
+.space(20,1,pl,padding-left,1);
+.space(20,1,pr,padding-right,1);
+.space(20,1,pt,padding-top,1);
+.space(20,1,pb,padding-bottom,1);
+
+.space(20,1,m,margin,1);
+.space(20,1,ml,margin-left,1);
+.space(20,1,mr,margin-right,1);
+.space(20,1,mt,margin-top,1);
+.space(20,1,mb,margin-bottom,1);
+
+.space(100,5,p,padding,25);
+.space(100,5,pl,padding-left,25);
+.space(100,5,pr,padding-right,25);
+.space(100,5,pt,padding-top,25);
+.space(100,5,pb,padding-bottom,25);
+
+.space(100,5,m,margin,25);
+.space(100,5,ml,margin-left,25);
+.space(100,5,mr,margin-right,25);
+.space(100,5,mt,margin-top,25);
+.space(100,5,mb,margin-bottom,25);
+
+.space(500,50,p,padding,150);
+.space(500,50,pl,padding-left,150);
+.space(500,50,pr,padding-right,150);
+.space(500,50,pt,padding-top,150);
+.space(500,50,pb,padding-bottom,150);
+
+.space(500,50,m,margin,150);
+.space(500,50,ml,margin-left,150);
+.space(500,50,mr,margin-right,150);
+.space(500,50,mt,margin-top,150);
+.space(500,50,mb,margin-bottom,150);
