@@ -56,7 +56,9 @@ export default {
     handleSubmit (name) {
       this.$refs[name].validate((valid) => {
         if (valid) {
-          this.$Message.success('Success!')
+          this.$router.push({
+            name:'Index'
+          })
         } else {
           this.$Message.error('Fail!')
         }
